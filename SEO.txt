@@ -1,0 +1,34 @@
+En el ARCHIVO index.html agregue las siguientes META:
+
+-Description: "Los veladores son perfectos para decorar tu hogar o para regalar. ¡Encontra el diseño que mas te guste!"
+
+-Keywords: ''Veladores, envio gratis, tienda, personalizar''
+
+-Copy: ''LightBox"
+
+-Author: ''Navarro Funes Francisco''
+
+ARCHIVO productos.html:
+
+- Description: ''Gran variedad de veladores para que puedas elegir o personalizar el tuyo.''
+
+-Keywords: "Veladores, envio gratis, tienda, personalizar"
+
+ARCHIVO nosotros.html:
+
+-Description: "Conoce sobre nuestra historia y como fuimos avanzando hasta ser lo que somos hoy en dia."
+
+-Keywords: "Veladores, historia, tienda, nosotros"
+
+ARCHIVO clientes.hmtl:
+
+-Description: "Conoce las opiniones de nuestros clientes al comprar nuestros productos."
+
+-Keywords: "Veladores, clientes, tienda, sastifechos"
+
+ARCHIVO contacto.html:
+
+-Description: "Comunicate con nosotros por las redes sociales y dejanos tu mensaje."
+
+-Keywords: "Veladores, consulta, tienda, redes sociales"
+
