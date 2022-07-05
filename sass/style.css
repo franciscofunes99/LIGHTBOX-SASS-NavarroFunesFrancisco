@@ -1,84 +1,67 @@
-.slider {
-  width: 95%;
-  margin: auto;
+body {
+  background-color: black;
+  overflow-x: hidden;
 }
-.slider ul {
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+.toggle-menu {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  filter: invert(1);
+}
+
+.historia {
+  max-width: 100%;
+}
+
+#check {
+  display: none;
+  position: absolute;
+}
+
+.col {
   display: flex;
-  padding: 0;
-  width: 200%;
-  -webkit-animation: cambio 20s infinite;
-          animation: cambio 20s infinite;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-}
-.slider ul li {
-  width: 100%;
-  list-style: none;
-}
-.slider ul li img {
-  width: 100%;
+  justify-content: center;
 }
 
-@-webkit-keyframes cambio {
-  0% {
-    margin-left: 0;
-  }
-  20% {
-    margin-left: 0;
-  }
-  25% {
-    margin-left: -100%;
-  }
-  45% {
-    margin-left: -100%;
-  }
-  50% {
-    margin-left: -200%;
-  }
-  70% {
-    margin-left: -200%;
-  }
-  75% {
-    margin-left: -300%;
-  }
-  100% {
-    margin-left: -300%;
-  }
+h1 {
+  margin-top: 150px;
+  padding-bottom: 50px;
+  margin-bottom: 30px;
+  color: rgb(194, 192, 179);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 400;
 }
 
-@keyframes cambio {
-  0% {
-    margin-left: 0;
-  }
-  20% {
-    margin-left: 0;
-  }
-  25% {
-    margin-left: -100%;
-  }
-  45% {
-    margin-left: -100%;
-  }
-  50% {
-    margin-left: -200%;
-  }
-  70% {
-    margin-left: -200%;
-  }
-  75% {
-    margin-left: -300%;
-  }
-  100% {
-    margin-left: -300%;
-  }
+.redes1 {
+  display: flex;
+  margin: auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: rgba(255, 255, 0, 0.562);
+  text-align: center;
 }
+
+.form-consulta {
+  width: 400px;
+  background-color: rgb(14, 12, 12);
+  padding: 20px;
+  margin-bottom: 20px;
+  margin: 0 auto;
+  margin-top: 100px;
+  border-radius: 5px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: rgba(255, 255, 0, 0.562);
+}
+
 @media screen and (min-width: 1000px) {
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    background-color: black;
-    min-width: 100%;
-  }
-
   .grilla {
     display: grid;
     gap: 10px;
@@ -109,10 +92,6 @@
     width: 160px;
     float: left;
     transition: 0.5s;
-  }
-
-  .logo img:hover {
-    transform: scale(1.1);
   }
 
   nav {
@@ -152,21 +131,7 @@
 
   .toggle-menu {
     width: 40px;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    cursor: pointer;
-    filter: invert(1);
     display: none;
-  }
-
-  .historia {
-    max-width: 100%;
-  }
-
-  #check {
-    display: none;
-    position: absolute;
   }
 
   img {
@@ -182,18 +147,8 @@
   }
 
   h1 {
-    margin-top: 150px;
-    margin-bottom: 30px;
-    color: rgb(194, 192, 179);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    text-align: center;
-    font-size: 30px;
-    font-weight: 400;
-  }
-
-  .col {
-    display: flex;
-    justify-content: center;
+    padding-bottom: 50px;
+    font-size: 35px;
   }
 
   aside {
@@ -239,13 +194,6 @@
     margin-top: 49px;
     text-align: center;
   }
-
-  .footer {
-    grid-area: footer;
-    color: rgba(255, 255, 0, 0.562);
-    text-align: center;
-    justify-content: flex-end;
-  }
 }
 .correo {
   margin-top: 40px;
@@ -257,18 +205,14 @@
   display: flex;
   justify-content: center;
 }
-
-.redes1 {
-  display: flex;
+.redes .redes1 {
   flex-flow: row wrap;
-  margin: auto;
-  padding: 20px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: rgba(255, 255, 0, 0.562);
-  text-align: center;
   transition: 0.5s;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.redes .redes1 img:hover {
+  transform: scale(1.2);
 }
 
 .instagram {
@@ -283,28 +227,12 @@
   filter: invert(62%) sepia(58%) saturate(4506%) hue-rotate(80deg) brightness(110%) contrast(107%);
 }
 
-.redes1 img:hover {
-  transform: scale(1.2);
-}
-
 h6 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: grey;
   font-size: 30px;
   text-align: center;
   padding-bottom: 20px;
-}
-
-.form-consulta {
-  width: 400px;
-  background-color: black;
-  padding: 20px;
-  margin-bottom: 20px;
-  margin: 0 auto;
-  margin-top: 100px;
-  border-radius: 5px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: rgba(255, 255, 0, 0.562);
 }
 
 aside h4 {
@@ -361,13 +289,6 @@ textarea {
   background: black;
   border-top: 1px solid yellow;
 }
-
-.title {
-  font-size: 40px;
-  color: rgba(255, 255, 0, 0.562);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-
 .conteiner-all img {
   width: 600px;
   float: left;
@@ -379,6 +300,12 @@ textarea {
   font-size: 20px;
   color: rgb(194, 192, 179);
   font-weight: 300;
+}
+
+.title {
+  font-size: 40px;
+  color: rgba(255, 255, 0, 0.562);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .clientes {
@@ -399,9 +326,8 @@ textarea {
 }
 
 @media only screen and (max-width: 999px) {
-  body {
-    background-color: black;
-    min-width: 100%;
+  html {
+    overflow-x: hidden;
   }
 
   section img {
@@ -418,11 +344,6 @@ textarea {
     right: 0;
   }
 
-  #check {
-    display: none;
-    position: absolute;
-  }
-
   .logo img {
     margin: 15px;
     width: 150px;
@@ -430,32 +351,18 @@ textarea {
     transition: 0.5s;
   }
 
-  .logo img:hover {
-    transform: scale(1.1);
-  }
-
   .toggle-menu {
     width: 25px;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    cursor: pointer;
-    filter: invert(1);
     display: block;
   }
 
-  .historia {
-    width: 100%;
-  }
-
-  ul {
+  nav ul {
     position: fixed;
     width: 100%;
     left: -100%;
     text-align: center;
     transition: all 0.5s;
   }
-
   nav ul li {
     z-index: 100%;
     display: block !important;
@@ -464,7 +371,7 @@ textarea {
     margin-right: 75px;
     line-height: 20px;
   }
-  nav a {
+  nav ul a {
     color: rgb(194, 192, 179);
     right: 50px;
     font-size: 20px;
@@ -472,7 +379,7 @@ textarea {
     text-decoration: none;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   }
-  nav :hover :active {
+  nav ul :hover :active {
     background: rgba(255, 255, 0, 0.562);
     color: black;
   }
@@ -484,21 +391,6 @@ textarea {
 
   .toggle-menu img {
     max-width: 100%;
-  }
-
-  h1 {
-    margin-top: 150px;
-    margin-bottom: 30px;
-    color: rgb(194, 192, 179);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    text-align: center;
-    font-size: 30px;
-    font-weight: 400;
-  }
-
-  .col {
-    display: flex;
-    justify-content: center !important;
   }
 
   button {
@@ -515,14 +407,9 @@ textarea {
     display: flex;
     justify-content: center;
   }
-
   .pagos img {
-    width: 100%;
+    width: 550px;
     padding: 20px;
-  }
-
-  .conteiner-all img {
-    width: 100%;
   }
 
   .title {
@@ -532,56 +419,44 @@ textarea {
   .conteiner-all p {
     font-size: 18px;
   }
-
-  .aside h6 {
-    font-size: 25px;
+  .conteiner-all img {
+    width: 100%;
   }
 
   .aside h3 {
     font-size: 25px;
     text-align: center;
-    color: rgb(194, 192, 179);
+    color: grey;
     padding: 10px;
+  }
+  .aside h6 {
+    font-size: 25px;
   }
 
   .frame iframe {
-    width: 100%;
+    width: 500px;
   }
 
   .horarios {
     text-align: center;
-    color: rgb(194, 192, 179);
+    color: grey;
     padding: 10px;
     font-size: 15px;
   }
 
   .redes1 {
-    display: flex;
     flex-direction: column;
-    margin: auto;
-    padding: 20px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    color: rgba(255, 255, 0, 0.562);
-    text-align: center;
   }
 
   .form-consulta {
     display: block;
     width: 300px;
-    background-color: rgb(17, 17, 17);
     padding: 30px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    margin-top: 100px;
-    border-radius: 5px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    color: rgba(255, 255, 0, 0.562);
   }
 }
 @media screen and (max-width: 600px) {
-  body {
-    background-color: black;
-    min-width: 100% !important;
+  html {
+    overflow-x: hidden;
   }
 
   section img {
@@ -615,30 +490,20 @@ textarea {
 
   .toggle-menu {
     width: 25px;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    cursor: pointer;
-    filter: invert(1);
     display: block;
-  }
-
-  .historia {
-    max-width: 100%;
   }
 
   .bg-dark text-center text-white {
     min-width: 100% !important;
   }
 
-  ul {
+  nav ul {
     position: fixed;
     width: 100%;
     left: -100%;
     text-align: center;
     transition: all 0.5s;
   }
-
   nav ul li {
     z-index: 100%;
     display: block !important;
@@ -647,7 +512,6 @@ textarea {
     margin-right: 75px;
     line-height: 20px;
   }
-
   nav ul li a {
     color: rgb(194, 192, 179);
     right: 50px;
@@ -656,9 +520,7 @@ textarea {
     text-decoration: none;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   }
-
-  li a:hover,
-li a:active {
+  nav ul li a :hover :active {
     background: rgba(255, 255, 0, 0.562);
     color: black;
   }
@@ -673,18 +535,7 @@ li a:active {
   }
 
   h1 {
-    margin-top: 150px;
-    margin-bottom: 30px;
-    color: rgb(194, 192, 179);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    text-align: center;
     font-size: 30px;
-    font-weight: 400;
-  }
-
-  .col {
-    display: flex;
-    justify-content: center !important;
   }
 
   button {
@@ -710,19 +561,17 @@ li a:active {
   .conteiner-all img {
     width: 100%;
   }
+  .conteiner-all p {
+    font-size: 18px;
+  }
 
   .title {
     font-size: 35px;
   }
 
-  .conteiner-all p {
-    font-size: 18px;
-  }
-
   .aside h6 {
     font-size: 25px;
   }
-
   .aside h3 {
     font-size: 25px;
     text-align: center;
@@ -731,7 +580,7 @@ li a:active {
   }
 
   .frame iframe {
-    width: 100%;
+    max-width: 100%;
   }
 
   .horarios {
@@ -754,14 +603,7 @@ li a:active {
   .form-consulta {
     display: block;
     width: 300px;
-    background-color: rgb(17, 17, 17);
-    padding: 30px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    margin-top: 100px;
-    border-radius: 5px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    color: rgba(255, 255, 0, 0.562);
+    margin-bottom: 30px;
   }
 
   .container {

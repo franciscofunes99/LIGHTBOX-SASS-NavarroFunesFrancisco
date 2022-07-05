@@ -6,7 +6,7 @@
   <title>LightBox</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="sass/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Conoce sobre nuestra historia y como fuimos avanzando hasta ser lo que somos hoy en dia.">
@@ -41,17 +41,13 @@
     <h1 class="title">Nuestra historia</h1>
     <div class="conteiner-all">
       <img src="img/historia.png" alt="">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quae esse incidunt, harum quidem cumque maiores
-        animi quia, facere rerum vero iure? Eligendi quidem fugit quasi laboriosam autem, placeat laborum. Lorem ipsum
-        dolor sit amet consectetur, adipisicing elit. Asperiores, harum veritatis placeat deleniti sint ratione fugiat
-        neque aliquid. Maiores dolorum qui perferendis quae. Delectus suscipit, ipsum deserunt beatae aperiam
-        architecto.</p>
+      <p>LightBox nace en el 2020 como un proyecto simple, buscar innovar en el sector de veladores, ya que como consumidor buscaba un diseño que no encontraba en ninguna tienda, ahí fue como comenzó todo. Saber que como yo había muchas personas también buscando un diseño único, fue así que empezamos hacer veladores personalizados pero a gente cercana. Todas las respuestas que recibimos de nuestros allegados nos impulsó a seguir creciendo y fue así que abrimos nuestra cuenta de Instagram, en principio hacíamos los diseños por parte de terceros, ya que no contábamos con los recursos necesarios para hacerlos por nuestra cuenta, pero no fue hasta el año 2021 que conseguimos nuestra primera máquina para generar los diseños que nuestros clientes nos solicitaban. Con el paso del tiempo nos fuimos atreviendo a expandirnos no solo en zonas aledañas sino también al resto del país y próximamente a países limítrofes. Actualmente nos seguimos expandiendo y siempre tratamos de brindar la mejor atención personalizada a nuestros clientes, sabiendo que es lo que buscan o que tienen en sus mentes para poder plasmarlos en nuestros veladores. </p>
 
     </div>
   </article>
   <aside class="aside">
   </aside>
-  <div class="container my-">
+  <div class="container my-" style="max-width: 100%;">
     <footer class="text-center text-lg-start border border-warning mt-xl-5 pt-4">
       <div class="container p-4">
         <div class="row">
@@ -70,10 +66,10 @@
             <h5 class="text-uppercase text-warning mb-4">Secciones</h5>
             <ul class="list-unstyled">
               <li>
-                <a href="productos.html"target="_blank" class="text-white">Productos</a>
+                <a href="productos.html" target="_blank" class="text-white">Productos</a>
               </li>
               <li>
-                <a href="nosotros.html"target="_blank" class="text-white">Nosotros</a>
+                <a href="nosotros.html" target="_blank" class="text-white">Nosotros</a>
               </li>
               <li>
                 <a href="clientes.html" target="_blank" class="text-white">Clientes</a>
@@ -84,20 +80,21 @@
             </ul>
           </div>
           <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-            <h5 class="text-uppercase mb-4 text-warning">Ubicacion</h5>
+            <h5 class="text-uppercase mb-4 text-warning">Ubicación</h5>
             <ul class="list-unstyled">
               <li>
-                <a href="https://www.google.com/maps/place/San+Francisco+620,+B1849BEL+Claypole,+Provincia+de+Buenos+Aires/data=!4m2!3m1!1s0x95a32b575a33bc4d:0xd5551d0e601b2aed?sa=X&ved=2ahUKEwiq_rGKkeD4AhUwlZUCHQjCACAQ8gF6BAgJEAE" target="_blank" class="text-white">San Francisco 620, Claypole, Buenos Aires </a>
+                <a href="https://www.google.com/maps/place/San+Francisco+620,+B1849BEL+Claypole,+Provincia+de+Buenos+Aires/data=!4m2!3m1!1s0x95a32b575a33bc4d:0xd5551d0e601b2aed?sa=X&ved=2ahUKEwiq_rGKkeD4AhUwlZUCHQjCACAQ8gF6BAgJEAE"
+                  target="_blank" class="text-white">San Francisco 620, Claypole, Buenos Aires </a>
               </li>
             </ul>
           </div>
           <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-            <h5 class="text-uppercase mb-4">Sign up to our newsletter</h5>
+            <h5 class="text-uppercase mb-4 text-white">Regístrate para recibir novedades</h5>
             <div class="form-outline form-white mb-4">
               <input type="email" id="form5Example2" class="form-control" />
-              <label class="form-label" for="form5Example2">Email address</label>
+              <label class="form-label text-warning" for="form5Example2">Email</label>
             </div>
-            <button type="submit" class="btn btn-outline-warning btn-block">Subscribe</button>
+            <button type="submit" class="btn btn-outline-warning btn-block">Subscribirse</button>
           </div>
         </div>
       </div>

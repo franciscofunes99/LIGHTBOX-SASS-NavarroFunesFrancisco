@@ -4,18 +4,76 @@
 
 @import "redes";
 
-@import "slider";
-
 @mixin propcenter {
     display: flex;
     justify-content: center;
 }
+
+body {
+    background-color: $colorprimario;
+    overflow-x: hidden;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.toggle-menu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    filter: invert(1);
+}
+
+.historia {
+    max-width: 100%;
+}
+
+#check {
+    display: none;
+    position: absolute;
+}
+
+.col {
+    @include propcenter();
+
+}
+
+h1 {
+    margin-top: 150px;
+    padding-bottom: 50px;
+    margin-bottom: 30px;
+    color: $letracolors;
+    font-family: $fontprimaria;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.redes1 {
+    display: flex;
+    margin: auto;
+    padding: 20px;
+    font-family: $fontprimaria;
+    color: $colorterciario;
+    text-align: center;
+}
+
+.form-consulta {
+    width: 400px;
+    background-color: $formback;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    margin-top: 100px;
+    border-radius: 5px;
+    font-family: $fontprimaria;
+    color: $colorterciario;
+}
+
 @media screen and (min-width:1000px) {
-    body {
-        font-family: $fontprimaria;
-        background-color: $colorprimario;
-        min-width: 100%;
-    }
+
 
     .grilla {
         display: grid;
@@ -55,9 +113,7 @@
         transition: 0.5s;
     }
 
-    .logo img:hover {
-        transform: scale(1.1);
-    }
+
 
     nav {
 
@@ -103,25 +159,7 @@
 
     .toggle-menu {
         width: 40px;
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        cursor: pointer;
-        filter: invert(1);
         display: none;
-    }
-    
-
-    .historia {
-        max-width: 100%;
-        img{
-            padding-top:50px;
-        }
-    }
-
-    #check {
-        display: none;
-        position: absolute;
     }
 
     img {
@@ -137,19 +175,13 @@
     }
 
     h1 {
-        margin-top: 150px;
-        margin-bottom: 30px;
-        color: $letracolors;
-        font-family: $fontprimaria;
-        text-align: center;
-        font-size: 30px;
-        font-weight: 400;
+        padding-bottom: 50px;
+        font-size: 35px;
     }
 
-    .col {
-        @include propcenter();
 
-    }
+
+
     aside {
         grid-area: aside;
         display: grid;
@@ -168,8 +200,10 @@
         }
     }
 
-    .pagos img {
-        max-width: 100%;
+    .pagos {
+        img {
+            max-width: 100%;
+        }
     }
 
     .frame {
@@ -196,12 +230,6 @@
         }
     }
 
-    .footer {
-        grid-area: footer;
-        color: $colorterciario;
-        text-align: center;
-        justify-content: flex-end;
-    }
 }
 
 .correo {
@@ -213,19 +241,19 @@
 
 .redes {
     @include propcenter;
+
+    .redes1 {
+        flex-flow: row wrap;
+        transition: 0.5s;
+        object-fit: cover;
+
+        img:hover {
+            transform: scale(1.2);
+        }
+    }
+
 }
 
-.redes1 {
-    display: flex;
-    flex-flow: row wrap;
-    margin: auto;
-    padding: 20px;
-    font-family: $fontprimaria;
-    color: $colorterciario;
-    text-align: center;
-    transition: 0.5s;
-    object-fit: cover;
-}
 
 .instagram {
     filter: map-get($contactos, instagram);
@@ -241,9 +269,6 @@
 
 }
 
-.redes1 img:hover {
-    transform: scale(1.2);
-}
 
 h6 {
     font-family: $fontprimaria;
@@ -253,23 +278,13 @@ h6 {
     padding-bottom: 20px;
 }
 
-.form-consulta {
-    width: 400px;
-    background-color: $colorprimario;
-    padding: 20px;
-    margin-bottom: 20px;
-    margin: 0 auto;
-    margin-top: 100px;
-    border-radius: 5px;
-    font-family: $fontprimaria;
-    color: $colorterciario;
-}
-
-aside h4 {
-    color: $colorterciario;
-    font-family: $fontprimaria;
-    font-size: 25px;
-    font-weight: 300;
+aside {
+    h4 {
+        color: $colorterciario;
+        font-family: $fontprimaria;
+        font-size: 25px;
+        font-weight: 300;
+    }
 }
 
 .textarea {
@@ -323,16 +338,7 @@ textarea {
     padding: 20px;
     background: $colorprimario;
     border-top: 1px solid $colorsecundario;
-}
 
-.title {
-    font-size: 40px;
-    color: $colorterciario;
-    font-family: $fontprimaria;
-
-}
-
-.conteiner-all {
     img {
         width: 600px;
         float: left;
@@ -347,6 +353,14 @@ textarea {
         font-weight: 300;
     }
 }
+
+.title {
+    font-size: 40px;
+    color: $colorterciario;
+    font-family: $fontprimaria;
+
+}
+
 
 .clientes {
     font-family: $fontprimaria;
@@ -372,200 +386,8 @@ form {
 }
 
 @media only screen and (max-width:999px) {
-    body {
-        background-color: $colorprimario;
-        min-width: 100%;
-    }
-
-    section img {
-        margin-top: 50px;
-        max-width: 100%;
-    }
-
-    nav {
-        background: $colorprimario;
-        outline: 1px solid $colorsecundario;
-        position: fixed;
-        left: 0;
-        top: 0;
-        right: 0;
-    }
-
-    #check {
-        display: none;
-        position: absolute;
-    }
-
-    .logo img {
-        margin: 15px;
-        width: 150px;
-        display: fixed;
-        transition: 0.5s;
-    }
-
-    .logo img:hover {
-        transform: scale(1.1);
-    }
-
-    .toggle-menu {
-        width: 25px;
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        cursor: pointer;
-        filter: invert(1);
-        display: block;
-    }
-
-    .historia {
-        width: 100%;
-    }
-
-    ul {
-        position: fixed;
-        width: 100%;
-        left: -100%;
-        text-align: center;
-        transition: all .5s;
-    }
-
-    nav {
-        ul {
-            li {
-                z-index: 100%;
-                display: block !important;
-                text-align: center;
-                margin: 50px 0;
-                margin-right: 75px;
-                line-height: 20px;
-            }
-        }
-
-        a {
-            color: rgb(194, 192, 179);
-            right: 50px;
-            font-size: 20px;
-            text-align: center;
-            text-decoration: none;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-
-        :hover {
-            :active {
-                background: rgba(255, 255, 0, 0.562);
-                color: $colorprimario;
-            }
-        }
-    }
-
-    #check:checked~ul {
-        left: 0;
-        background: $colorprimario;
-    }
-
-    .toggle-menu img {
-        max-width: 100%;
-    }
-
-    h1 {
-        margin-top: 150px;
-        margin-bottom: 30px;
-        color: rgb(194, 192, 179);
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        text-align: center;
-        font-size: 30px;
-        font-weight: 400;
-    }
-
-    .col {
-        display: flex;
-        justify-content: center !important;
-    }
-
-    button {
-        font-style: normal;
-        border-color: rgba(255, 255, 0, 0.562);
-        color: rgb(194, 192, 179);
-        background-color: rgb(44, 43, 43);
-        margin-top: 20px;
-        margin-left: 150px;
-        margin-right: 150px;
-    }
-
-    .pagos {
-        display: flex;
-        justify-content: center;
-    }
-
-    .pagos img {
-        width: 100%;
-        padding: 20px;
-    }
-
-    .conteiner-all img {
-        width: 100%;
-    }
-
-    .title {
-        font-size: 35px;
-    }
-
-    .conteiner-all p {
-        font-size: 18px;
-    }
-
-    .aside h6 {
-        font-size: 25px;
-    }
-
-    .aside h3 {
-        font-size: 25px;
-        text-align: center;
-        color: rgb(194, 192, 179);
-        padding: 10px;
-
-    }
-
-    .frame iframe {
-        width: 100%;
-    }
-
-    .horarios {
-        text-align: center;
-        color: rgb(194, 192, 179);
-        padding: 10px;
-        font-size: 15px;
-    }
-
-    .redes1 {
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-        padding: 20px;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        color: rgba(255, 255, 0, 0.562);
-        text-align: center;
-    }
-
-
-    .form-consulta {
-        display: block;
-        width: 300px;
-        background-color: rgb(17, 17, 17);
-        padding: 30px;
-        margin: 0 auto;
-        margin-bottom: 20px;
-        margin-top: 100px;
-        border-radius: 5px;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        color: rgba(255, 255, 0, 0.562);
-    }
-}
-
-@media screen and (max-width:600px) {
-    body {
-        background-color: $colorprimario;
-        min-width: 100% !important;
+    html {
+        overflow-x: hidden;
     }
 
     section {
@@ -577,7 +399,174 @@ form {
 
     nav {
         background: $colorprimario;
-        outline: 1px solid yellow;
+        outline: 1px solid $colorsecundario;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+    }
+
+
+
+    .logo {
+        img {
+            margin: 15px;
+            width: 150px;
+            display: fixed;
+            transition: 0.5s;
+
+
+        }
+
+    }
+
+    .toggle-menu {
+        width: 25px;
+        display: block;
+    }
+
+
+    nav {
+        ul {
+            position: fixed;
+            width: 100%;
+            left: -100%;
+            text-align: center;
+            transition: all .5s;
+
+            li {
+                z-index: 100%;
+                display: block !important;
+                text-align: center;
+                margin: 50px 0;
+                margin-right: 75px;
+                line-height: 20px;
+            }
+
+
+            a {
+                color: $letracolors;
+                right: 50px;
+                font-size: 20px;
+                text-align: center;
+                text-decoration: none;
+                font-family: $fontprimaria;
+            }
+
+            :hover {
+                :active {
+                    background: $colorterciario;
+                    color: $colorprimario;
+                }
+            }
+        }
+
+    }
+
+    #check:checked~ul {
+        left: 0;
+        background: $colorprimario;
+    }
+
+    .toggle-menu {
+        img {
+            max-width: 100%;
+        }
+
+    }
+
+
+    button {
+        font-style: normal;
+        border-color: $colorterciario;
+        color: $letracolors;
+        background-color: $btoncolor ;
+        margin-top: 20px;
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+
+    .pagos {
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 550px;
+            padding: 20px;
+        }
+    }
+
+
+    .title {
+        font-size: 35px;
+    }
+
+    .conteiner-all {
+        p {
+            font-size: 18px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+    }
+
+    .aside {
+        h3 {
+            font-size: 25px;
+            text-align: center;
+            color: $coloralt;
+            padding: 10px;
+
+        }
+
+        h6 {
+            font-size: 25px;
+        }
+
+    }
+
+    .frame {
+        iframe {
+            width: 500px;
+        }
+    }
+
+    .horarios {
+        text-align: center;
+        color: $coloralt;
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .redes1 {
+        flex-direction: column;
+    }
+
+
+    .form-consulta {
+        display: block;
+        width: 300px;
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    html {
+        overflow-x: hidden;
+    }
+
+    section {
+        img {
+            margin-top: 50px;
+            max-width: 100%;
+        }
+    }
+
+    nav {
+        background: $colorprimario;
+        outline: 1px solid $colorsecundario;
         position: fixed;
         left: 0;
         top: 0;
@@ -604,54 +593,48 @@ form {
 
     .toggle-menu {
         width: 25px;
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        cursor: pointer;
-        filter: invert(1);
         display: block;
-    }
-
-    .historia {
-        max-width: 100%;
     }
 
     .bg-dark text-center text-white {
         min-width: 100% !important;
     }
 
-    ul {
-        position: fixed;
-        width: 100%;
-        left: -100%;
-        text-align: center;
-        transition: all .5s;
-    }
+    nav {
+        ul {
+            position: fixed;
+            width: 100%;
+            left: -100%;
+            text-align: center;
+            transition: all .5s;
 
-    nav ul li {
-        z-index: 100%;
-        display: block !important;
-        text-align: center;
-        margin: 50px 0;
-        margin-right: 75px;
-        line-height: 20px;
-    }
+            li {
+                z-index: 100%;
+                display: block !important;
+                text-align: center;
+                margin: 50px 0;
+                margin-right: 75px;
+                line-height: 20px;
 
-    nav ul li a {
+                a {
 
-        color: rgb(194, 192, 179);
-        right: 50px;
-        font-size: 20px;
-        text-align: center;
-        text-decoration: none;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    color: $letracolors;
+                    right: 50px;
+                    font-size: 20px;
+                    text-align: center;
+                    text-decoration: none;
+                    font-family: $fontprimaria;
 
-    }
+                    :hover {
+                        :active {
+                            background: $colorterciario;
+                            color: $colorprimario;
+                        }
+                    }
 
-    li a:hover,
-    li a:active {
-        background: rgba(255, 255, 0, 0.562);
-        color: $colorprimario;
+                }
+            }
+        }
     }
 
     #check:checked~ul {
@@ -659,30 +642,22 @@ form {
         background: $colorprimario;
     }
 
-    .toggle-menu img {
-        max-width: 100%;
+    .toggle-menu {
+        img {
+            max-width: 100%;
+        }
     }
 
     h1 {
-        margin-top: 150px;
-        margin-bottom: 30px;
-        color: rgb(194, 192, 179);
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        text-align: center;
-        font-size: 30px;
-        font-weight: 400;
-    }
 
-    .col {
-        display: flex;
-        justify-content: center !important;
+        font-size: 30px;
     }
 
     button {
         font-style: normal;
-        border-color: rgba(255, 255, 0, 0.562);
-        color: rgb(194, 192, 179);
-        background-color: rgb(44, 43, 43);
+        border-color: $colorterciario;
+        color: $letracolors;
+        background-color: $btoncolor;
         margin-top: 20px;
         margin-left: 150px;
         margin-right: 150px;
@@ -692,42 +667,53 @@ form {
         @include propcenter();
     }
 
-    .pagos img {
-        width: 100%;
-        padding: 20px;
+    .pagos {
+        img {
+            width: 100%;
+            padding: 20px;
+        }
+
     }
 
-    .conteiner-all img {
-        width: 100%;
+    .conteiner-all {
+        img {
+            width: 100%;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
     }
 
     .title {
         font-size: 35px;
     }
 
-    .conteiner-all p {
-        font-size: 18px;
+    .aside {
+        h6 {
+            font-size: 25px;
+        }
+
+        h3 {
+            font-size: 25px;
+            text-align: center;
+            color: $letracolors;
+            padding: 10px;
+
+        }
     }
 
-    .aside h6 {
-        font-size: 25px;
-    }
+    .frame {
+        iframe {
+            max-width: 100%;
+        }
 
-    .aside h3 {
-        font-size: 25px;
-        text-align: center;
-        color: rgb(194, 192, 179);
-        padding: 10px;
-
-    }
-
-    .frame iframe {
-        width: 100%;
     }
 
     .horarios {
         text-align: center;
-        color: rgb(194, 192, 179);
+        color: $letracolors;
         padding: 10px;
         font-size: 15px;
     }
@@ -737,8 +723,8 @@ form {
         flex-direction: column;
         margin: auto;
         padding: 20px;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        color: rgba(255, 255, 0, 0.562);
+        font-family: $fontprimaria;
+        color: $colorterciario;
         text-align: center;
     }
 
@@ -746,14 +732,7 @@ form {
     .form-consulta {
         display: block;
         width: 300px;
-        background-color: rgb(17, 17, 17);
-        padding: 30px;
-        margin: 0 auto;
-        margin-bottom: 20px;
-        margin-top: 100px;
-        border-radius: 5px;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        color: rgba(255, 255, 0, 0.562);
+        margin-bottom: 30px;
     }
 
     .container {
