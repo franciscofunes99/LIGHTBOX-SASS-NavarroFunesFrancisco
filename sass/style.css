@@ -424,6 +424,9 @@ textarea {
     padding: 10px;
     font-size: 15px;
   }
+  .texto {
+    width: 100%;
+  }
   .redes1 {
     flex-direction: column;
   }
